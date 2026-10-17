@@ -6,14 +6,30 @@
     <title>welcome to my website which shows all my best projects from each year</title>
     <style>
         body {
-            background-color: #fefbfb;
+            background-color: #f5f5f5;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
         }
+        .microbit_game:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        .microbit_game {
+            height: 380px;
+            width: 320px;
+            margin-left: 380px;
+            margin-top: -400px;
+            display: inline-block;
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #f0ecec;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
         button {
             background-color: #000000;
-            color: #f8f3f3;
+            color: #f5f5f5;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
@@ -24,31 +40,32 @@
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
+
         .ballon_game {
             height: 350px;
             width: 300px;
             margin-right: 800px;
             display: inline-block;
-            background-color: #030000;
-            padding: 20px;
+            background-color: #000000;
+            padding: 15px;
             border-radius: 10px;
-            border: 1px solid #fdf5f5;
+            border: 1px solid #f5f4f4;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         img:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;}
         img {
-            border: 2px solid #fbf9f9;
+            border: 2px solid #fcf9f9;
             border-radius: 10px;
         }
 
         h2 {
             text-align: top;
-            color: #eeecec;
+            color: #fefefe;
         }
         h1 {
-            color: #000000;
+            color: #150101;
         }
     </style>
 </head>
@@ -60,8 +77,14 @@
      </a>
      <h2>Balloon Pop Game made in 2023 on scratch to get more information about the game click on the image or <a href="poping_the_ballon_html.html">click here</a> </h2>
     </div>
-    <a href="https://ninja-keny.github.io/best-projects-from-every-year/">
-        <button>change background to black</button>
+    <div class = "microbit_game">
+     <a href="microbit_project.html">
+      <img src="microbitprojectscreen.png" width="270" height="230">
+     </a>
+     <h2>Microbit Project made in 2024 on microbit to get more information about the game click on the image or <a href="microbit_project.html">click here</a> </h2>
+    </div>
+    <a href="white_background_opening_screen.html">
+        <button>click to change background to white</button>
     </a>
 </body>
 </html>
