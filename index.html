@@ -30,6 +30,7 @@
         }
         button {
             margin-bottom: -100px;
+            margin-right: 50px;
             background-color: #f2f2f2;
             color: #000000;
             border: none;
@@ -38,6 +39,8 @@
             cursor: pointer;
             border-radius: 5px;
         }
+        button:hover{transform: scale(1.1);
+        transition: transition ease 0.3s;}
         .project_2024{height: 400px;
             width: 340px;
             padding: 20px;
@@ -91,6 +94,18 @@
             button{margin-left: 10px;}
         }
     </style>
+    <script>
+        function choose_random_project(){
+         let randomNumber = Math.floor(Math.random() * 3) + 1;
+             if (randomNumber === 1) {
+        window.location.href = "stop_wacth.html";
+        } else if (randomNumber === 2) {
+        window.location.href = "microbit_project.html";
+        } else {
+        window.location.href = "poping_the_ballon_html.html";
+        }
+        }
+    </script>
 </head>
 <body>
     <h1>welcome to my website which shows all my best projects from each year</h1>
@@ -108,10 +123,12 @@
     </div>
     <div class = "project_2024">
      <a href ="stop_wacth.html"><img src = "stop_wacth_screenshot.png" width="270" height = "230"></a>
-     <h2>this is stop wacth project i made in 2024 on trinket to get more information <a href = "stop_wacth.html">click here</a> or click on the image</h2>
+     <h2>this is stop wacth project i made in 2024 on trinket to get more information <a href = "stop_wacth.html">click here</a>
+         or click on the images</h2>
     </div>
     <a href="white_background_opening_screen.html">
         <button>click to change background to white</button>
     </a>
+    <button onclick="choose_random_project()">click to go into a random project</button>
 </body>
 </html>
