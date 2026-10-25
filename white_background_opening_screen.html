@@ -6,7 +6,7 @@
     <title>welcome to my website which shows all my best projects from each year</title>
     <style>
         body {
-            background-color: #fbf9f9;
+            background-color: #f9f5f5;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
@@ -22,27 +22,30 @@
             margin-left: 100px;
             margin-top: -400px;
             display: inline-block;
-            background-color: #090000;
+            background-color: #000000;
             padding: 20px;
             border-radius: 10px;
-            border: 1px solid #fefdfd;
-            box-shadow: 0 4px 8px rgba(248, 248, 248, 0.96);
+            border: 1px solid #020000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.99);
         }
         button {
             margin-bottom: -100px;
-            background-color: #090000;
-            color: #f7f5f5;
+            margin-right: 50px;
+            background-color: #000000;
+            color: #ffffff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
             border-radius: 5px;
         }
+        button:hover{transform: scale(1.1);
+        transition: transition ease 0.3s;}
         .project_2024{height: 400px;
             width: 340px;
             padding: 20px;
-            background-color: #070000;
-            border: 2px solid rgb(249, 247, 247);
+            background-color: #000000;
+            border: 2px solid rgb(247, 243, 243);
             border-radius: 20px;
             margin-left: 1000px;
             margin-top: -430px;
@@ -61,22 +64,22 @@
             width: 300px;
             margin-right: 700px;
             display: inline-block;
-            background-color: #050000;
+            background-color: #060000;
             padding: 15px;
             border-radius: 10px;
-            border: 1px solid #fdfcfc;
-            box-shadow: 0 4px 8px rgba(247, 247, 247, 0.974);
+            border: 1px solid #fcfafa;
+            box-shadow: 0 4px 8px rgb(255, 255, 255);
         }
         img:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;}
         img {
-            border: 2px solid #faf7f7;
+            border: 2px solid #fffefe;
             border-radius: 10px;
         }
         h2 {
             text-align: center;
-            color: #ffffff;
+            color: #fbfbfb;
         }
         h1 {
             color: #000000;
@@ -91,6 +94,18 @@
             button{margin-left: 10px;}
         }
     </style>
+    <script>
+        function choose_random_project(){
+         let randomNumber = Math.floor(Math.random() * 3) + 1;
+             if (randomNumber === 1) {
+        window.location.href = "stop_wacth.html";
+        } else if (randomNumber === 2) {
+        window.location.href = "microbit_project.html";
+        } else {
+        window.location.href = "poping_the_ballon_html.html";
+        }
+        }
+    </script>
 </head>
 <body>
     <h1>welcome to my website which shows all my best projects from each year</h1>
@@ -108,10 +123,12 @@
     </div>
     <div class = "project_2024">
      <a href ="stop_wacth.html"><img src = "stop_wacth_screenshot.png" width="270" height = "230"></a>
-     <h2>this is stop wacth project i made in 2024 on trinket to get more information <a href = "stop_wacth.html">click here</a> or click on the image</h2>
+     <h2>this is stop wacth project i made in 2024 on trinket to get more information <a href = "stop_wacth.html">click here</a>
+         or click on the images</h2>
     </div>
     <a href="index.html">
         <button>click to change background to black</button>
     </a>
+    <button onclick="choose_random_project()">click to go into a random project</button>
 </body>
 </html>
