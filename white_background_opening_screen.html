@@ -6,7 +6,7 @@
     <title>welcome to my website which shows all my best projects from each year</title>
     <style>
         body {
-            background-color: #f9f5f5;
+            background-color: #fcfcfc;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
@@ -19,20 +19,20 @@
         .microbit_game {
             height: 380px;
             width: 320px;
-            margin-left: 100px;
-            margin-top: -400px;
+            margin-right: 100px;
+            margin-left: 50px;
             display: inline-block;
             background-color: #000000;
             padding: 20px;
             border-radius: 10px;
-            border: 1px solid #020000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.99);
+            border: 1px solid #ffffff;
+            box-shadow: 0 4px 8px rgb(251, 250, 250);
         }
         button {
             margin-bottom: -100px;
             margin-right: 50px;
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #070000;
+            color: #fdfcfc;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
@@ -45,11 +45,10 @@
             width: 340px;
             padding: 20px;
             background-color: #000000;
-            border: 2px solid rgb(247, 243, 243);
+            border: 2px solid rgb(247, 246, 246);
             border-radius: 20px;
-            margin-left: 1000px;
             margin-top: -430px;
-
+            margin-left: 930px;
         }
         .project_2024:hover{
             transform: scale(1.05);
@@ -62,48 +61,62 @@
         .ballon_game {
             height: 350px;
             width: 300px;
-            margin-right: 700px;
+            margin-left:-300px;
             display: inline-block;
-            background-color: #060000;
+            background-color: #000000;
             padding: 15px;
             border-radius: 10px;
-            border: 1px solid #fcfafa;
-            box-shadow: 0 4px 8px rgb(255, 255, 255);
+            border: 1px solid #fbfafa;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .project_2025{width: 300px;
+        height: 350px;
+        border: #fdfbfb;
+        padding: 20px;
+        border-radius: 20px;
+        margin-left: 120px;
+        margin-bottom: 50px;
+        background-color: #000000;}
+        .project_2025:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
         }
         img:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;}
         img {
-            border: 2px solid #fffefe;
+            border: 2px solid #fdfcfc;
             border-radius: 10px;
         }
         h2 {
             text-align: center;
-            color: #fbfbfb;
+            color: #fffdfd;
         }
         h1 {
             color: #000000;
         }
-        @media (max-width: 780px){
+        @media (max-width: 900px){
             .ballon_game{
-            margin-bottom: 450px;}
+            margin-bottom: 50px;
+            margin-left: -50px;}
             .microbit_game{margin-left: 10px;
             margin-bottom: 450px;}
-            .project_2024{margin-left: 10px;
+            .project_2024{margin-left: 20px;
             margin-bottom: 20px;}
             button{margin-left: 10px;}
         }
     </style>
     <script>
         function choose_random_project(){
-         let randomNumber = Math.floor(Math.random() * 3) + 1;
+         let randomNumber = Math.floor(Math.random() * 4) + 1;
              if (randomNumber === 1) {
         window.location.href = "stop_wacth.html";
         } else if (randomNumber === 2) {
         window.location.href = "microbit_project.html";
-        } else {
+        } else if (randomNumber === 3) {
         window.location.href = "poping_the_ballon_html.html";
         }
+        else{window.location.href = "circle_cacher.html"}
         }
     </script>
 </head>
@@ -125,6 +138,13 @@
      <a href ="stop_wacth.html"><img src = "stop_wacth_screenshot.png" width="270" height = "230"></a>
      <h2>this is stop wacth project i made in 2024 on trinket to get more information <a href = "stop_wacth.html">click here</a>
          or click on the images</h2>
+    </div>
+    <div class = "project_2025">
+        <a href = "circle_cacher.html">
+        <img src = "circle_cacther.png" width = "300px" height = "230px">
+        </a>
+        <h2>this is my circle cather game on trinket to get more information on the project
+            <a href="circle_cacher.html">click here</a> or click on the image</h2>
     </div>
     <a href="index.html">
         <button>click to change background to black</button>
