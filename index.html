@@ -4,154 +4,255 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>welcome to my website which shows all my best projects from each year</title>
+
     <style>
+
         body {
             background-color: #000000;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
         }
-        
-        .microbit_game:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
+
+        h1 {
+            color: #f7f6f6;
         }
-        .microbit_game {
-            height: 380px;
-            width: 320px;
-            margin-right: 100px;
-            margin-left: 50px;
-            display: inline-block;
-            background-color: #f2f2f2;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #130101;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        button {
-            margin-bottom: -100px;
-            margin-right: 50px;
-            background-color: #f2f2f2;
-            color: #000000;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover{transform: scale(1.1);
-        transition: transition ease 0.3s;}
-        .project_2024{height: 400px;
-            width: 340px;
-            padding: 20px;
-            background-color: #fffdfd;
-            border: 2px solid black;
-            border-radius: 20px;
-            margin-top: -430px;
-            margin-left: 930px;
-        }
-        .project_2024:hover{
-            transform: scale(1.05);
-            transition: transform ease 0.3s;
-        }
-        .ballon_game:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-        .ballon_game {
-            height: 350px;
-            width: 300px;
-            margin-left:-300px;
-            display: inline-block;
-            background-color: #f2f2f2;
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #130101;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .project_2025{width: 300px;
-        height: 370px;
-        border: #000000;
-        padding: 20px;
-        border-radius: 20px;
-        margin-left: 120px;
-        margin-bottom: 50px;
-        background-color: #f2f2f2;}
-        .project_2025:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
-        img:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;}
-        img {
-            border: 2px solid #150303;
-            border-radius: 10px;
-        }
+
         h2 {
             text-align: center;
             color: #0d0101;
         }
-        h1 {
-            color: #f7f6f6;
+
+        img {
+            border: 2px solid #150303;
+            border-radius: 10px;
         }
-        @media (max-width: 900px){
-            .ballon_game{
+
+        img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
             margin-bottom: 50px;
-            margin-left: -50px;}
-            .microbit_game{margin-left: 10px;
-            margin-bottom: 450px;}
-            .project_2024{margin-left: 20px;
-            margin-bottom: 20px;}
-            .project_2025{margin-left: 20px;
-            margin-bottom: 20px;}
-            button{margin-left: 10px;
-            margin-bottom: 20px;}
         }
+
+        .ballon_game {
+            height: 350px;
+            width: 300px;
+
+            background-color: #f2f2f2;
+            padding: 15px;
+
+            border-radius: 10px;
+            border: 1px solid #130101;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ballon_game:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .microbit_game {
+            height: 380px;
+            width: 320px;
+
+            background-color: #f2f2f2;
+            padding: 20px;
+
+            border-radius: 10px;
+            border: 1px solid #130101;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .microbit_game:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .project_2024 {
+
+            height: 400px;
+            width: 340px;
+
+            padding: 20px;
+
+            background-color: #fffdfd;
+
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+
+        .project_2024:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .project_2025 {
+
+            width: 300px;
+            height: 370px;
+
+            background-color: #f2f2f2;
+
+            padding: 20px;
+
+            border-radius: 20px;
+        }
+
+        .project_2025:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        button {
+
+            background-color: #f2f2f2;
+            color: #000000;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+            margin: 10px;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        @media (max-width: 900px) {
+
+            body {
+                padding: 20px;
+            }
+
+            .projects {
+                gap: 20px;
+            }
+
+        }
+
     </style>
+
     <script>
+
         function choose_random_project(){
-         let randomNumber = Math.floor(Math.random() * 4) + 1;
-             if (randomNumber === 1) {
-        window.location.href = "stop_wacth.html";
-        } else if (randomNumber === 2) {
-        window.location.href = "microbit_project.html";
-        } else if (randomNumber === 3) {
-        window.location.href = "poping_the_ballon_html.html";
+
+            let randomNumber = Math.floor(Math.random() * 4) + 1;
+
+            if (randomNumber === 1) {
+                window.location.href = "stop_wacth.html";
+            }
+
+            else if (randomNumber === 2) {
+                window.location.href = "microbit_project.html";
+            }
+
+            else if (randomNumber === 3) {
+                window.location.href = "poping_the_ballon_html.html";
+            }
+
+            else {
+                window.location.href = "circle_cacher.html";
+            }
+
         }
-        else{window.location.href = "circle_cacher.html"}
-        }
+
     </script>
+
 </head>
+
 <body>
-    <h1>welcome to my website which shows all my best projects from each year</h1>
-    <div class = "ballon_game">
-     <a href="poping_the_ballon_html.html">
-      <img src="ballonpopscreen.png" width="250" height="200">
-     </a>
-     <h2>Balloon Pop Game made in 2023 on scratch to get more information about the game click on the image or <a href="poping_the_ballon_html.html">click here</a> </h2>
-    </div>
-    <div class = "microbit_game">
-     <a href="microbit_project.html">
-      <img src="microbitprojectscreen.png" width="270" height="230">
-     </a>
-     <h2>Microbit Project made in 2024 on microbit to get more information about the game click on the image or <a href="microbit_project.html">click here</a> </h2>
-    </div>
-    <div class = "project_2024">
-     <a href ="stop_wacth.html"><img src = "stop_wacth_screenshot.png" width="270" height = "230"></a>
-     <h2>this is stop wacth project i made in 2024 on trinket to get more information <a href = "stop_wacth.html">click here</a>
-         or click on the images</h2>
-    </div>
-    <div class = "project_2025">
-        <a href = "circle_cacher.html">
-        <img src = "circle_cacther.png" width = "300px" height = "230px">
+
+<h1>welcome to my website which shows all my best projects from each year</h1>
+
+<div class="projects">
+
+    <div class="ballon_game">
+
+        <a href="poping_the_ballon_html.html">
+            <img src="ballonpopscreen.png" width="250" height="200">
         </a>
-        <h2>this is my circle cather game on trinket to get more information on the project
-            <a href="circle_cacher.html">click here</a> or click on the image</h2>
+
+        <h2>
+            Balloon Pop Game made in 2023 on scratch.
+            Click on the image or
+            <a href="poping_the_ballon_html.html">click here</a>
+        </h2>
+
     </div>
-    <a href="white_background_opening_screen.html">
-        <button>click to change background to white</button>
-    </a>
-    <button onclick="choose_random_project()">click to go into a random project</button>
+
+    <div class="microbit_game">
+
+        <a href="microbit_project.html">
+            <img src="microbitprojectscreen.png" width="270" height="230">
+        </a>
+
+        <h2>
+            Microbit Project made in 2024 on microbit.
+            Click on the image or
+            <a href="microbit_project.html">click here</a>
+        </h2>
+
+    </div>
+
+    <div class="project_2024">
+
+        <a href="stop_wacth.html">
+            <img src="stop_wacth_screenshot.png" width="270" height="230">
+        </a>
+
+        <h2>
+            This is my stopwatch project made in 2024 on Trinket.
+            To get more information
+            <a href="stop_wacth.html">click here</a>
+            or click on the image.
+        </h2>
+
+    </div>
+
+    <div class="project_2025">
+
+        <a href="circle_cacher.html">
+            <img src="circle_cacther.png" width="300" height="230">
+        </a>
+
+        <h2>
+            This is my Circle Catcher game.
+            To get more information
+            <a href="circle_cacher.html">click here</a>
+            or click on the image.
+        </h2>
+
+    </div>
+
+</div>
+
+<a href="white_background_opening_screen.html">
+    <button>
+        click to change background to white
+    </button>
+</a>
+
+<button onclick="choose_random_project()">
+    click to go into a random project
+</button>
+
 </body>
 </html>
