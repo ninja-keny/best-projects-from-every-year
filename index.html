@@ -64,13 +64,10 @@
         .microbit_game {
             height: 380px;
             width: 320px;
-
             background-color: #f2f2f2;
             padding: 20px;
-
             border-radius: 10px;
             border: 1px solid #130101;
-
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -80,14 +77,10 @@
         }
 
         .project_2024 {
-
             height: 400px;
             width: 340px;
-
             padding: 20px;
-
             background-color: #fffdfd;
-
             border: 2px solid black;
             border-radius: 20px;
         }
@@ -99,42 +92,44 @@
 
         .project_2025 {
 
-            width: 300px;
-            height: 370px;
-
+            width: 310px;
+            height: 380px;
             background-color: #f2f2f2;
-
             padding: 20px;
-
             border-radius: 20px;
         }
 
         .project_2025:hover {
             transform: scale(1.05);
-            transition: transform 0.3s ease;
+            transition: transfoArm 0.3s ease;
         }
 
         button {
-
             background-color: #f2f2f2;
             color: #000000;
-
             border: none;
-
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-
             border-radius: 5px;
-
             margin: 10px;
         }
 
         button:hover {
             transform: scale(1.1);
             transition: 0.3s;
+            background-color: #f2f2f2d2;
         }
-
+        .pyturtle_project{
+            height: 350px;
+            width: 300px;
+            padding: 30px;
+            background-color: #fffdfd;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        .pyturtle_project:hover{transform: scale(1.1);
+        transition: transform ease 0.3s}
         @media (max-width: 900px) {
 
             body {
@@ -153,7 +148,7 @@
 
         function choose_random_project(){
 
-            let randomNumber = Math.floor(Math.random() * 4) + 1;
+            let randomNumber = Math.floor(Math.random() * 5) + 1;
 
             if (randomNumber === 1) {
                 window.location.href = "stop_wacth.html";
@@ -167,9 +162,10 @@
                 window.location.href = "poping_the_ballon_html.html";
             }
 
-            else {
+            else if (randomNumber===4) {
                 window.location.href = "circle_cacher.html";
             }
+            else{window.location.href = "python_turtle_project.html"}
 
         }
 
@@ -240,7 +236,12 @@
         </h2>
 
     </div>
-
+    <div class = "pyturtle_project">
+        <a href="python_turtle_project.html">
+        <img src = "pyturtle_logo.png" width = "300" height = "220">
+        </a>
+        <h2>this is my pyturtle project. made in 2026 in python To get more information <a href = "python_turtle_project.html"> click here </a> or click on the image</h2>
+    </div>
 </div>
 
 <a href="white_background_opening_screen.html">

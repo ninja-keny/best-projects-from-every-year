@@ -8,23 +8,23 @@
     <style>
 
         body {
-            background-color: #f9f8f8;
+            background-color: #fffefe;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
         }
 
         h1 {
-            color: #0e0000;
+            color: #000000;
         }
 
         h2 {
             text-align: center;
-            color: #f8f5f5;
+            color: #fcfafa;
         }
 
         img {
-            border: 2px solid #ffffff;
+            border: 2px solid #fdfbfb;
             border-radius: 10px;
         }
 
@@ -47,13 +47,13 @@
             height: 350px;
             width: 300px;
 
-            background-color: #040000;
+            background-color: #000000;
             padding: 15px;
 
             border-radius: 10px;
-            border: 1px solid #ffffff;
+            border: 1px solid #fcfcfc;
 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgb(255, 254, 254);
         }
 
         .ballon_game:hover {
@@ -64,13 +64,11 @@
         .microbit_game {
             height: 380px;
             width: 320px;
-
-            background-color: #0f0000;
+            background-color: #000000;
             padding: 20px;
-
             border-radius: 10px;
-            border: 1px solid #fdfdfd;
-            box-shadow: 0 4px 8px rgb(255, 255, 255);
+            border: 1px solid #fbfbfb;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.97);
         }
 
         .microbit_game:hover {
@@ -82,8 +80,8 @@
             height: 400px;
             width: 340px;
             padding: 20px;
-            background-color: #000000;
-            border: 2px solid rgb(255, 253, 253);
+            background-color: #060000;
+            border: 2px solid rgb(249, 249, 249);
             border-radius: 20px;
         }
 
@@ -93,8 +91,9 @@
         }
 
         .project_2025 {
-            width: 300px;
-            height: 370px;
+
+            width: 310px;
+            height: 380px;
             background-color: #000000;
             padding: 20px;
             border-radius: 20px;
@@ -102,13 +101,12 @@
 
         .project_2025:hover {
             transform: scale(1.05);
-            transition: transform 0.3s ease;
+            transition: transfoArm 0.3s ease;
         }
 
         button {
-
             background-color: #000000;
-            color: #ffffff;
+            color: #f8f8f8;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
@@ -120,8 +118,18 @@
         button:hover {
             transform: scale(1.1);
             transition: 0.3s;
+            background-color: #000000c4;
         }
-
+        .pyturtle_project{
+            height: 350px;
+            width: 300px;
+            padding: 30px;
+            background-color: #000000;
+            border: 2px solid rgb(253, 253, 253);
+            border-radius: 20px;
+        }
+        .pyturtle_project:hover{transform: scale(1.1);
+        transition: transform ease 0.3s}
         @media (max-width: 900px) {
 
             body {
@@ -140,7 +148,7 @@
 
         function choose_random_project(){
 
-            let randomNumber = Math.floor(Math.random() * 4) + 1;
+            let randomNumber = Math.floor(Math.random() * 5) + 1;
 
             if (randomNumber === 1) {
                 window.location.href = "stop_wacth.html";
@@ -154,9 +162,10 @@
                 window.location.href = "poping_the_ballon_html.html";
             }
 
-            else {
+            else if (randomNumber===4) {
                 window.location.href = "circle_cacher.html";
             }
+            else{window.location.href = "python_turtle_project.html"}
 
         }
 
@@ -227,7 +236,12 @@
         </h2>
 
     </div>
-
+    <div class = "pyturtle_project">
+        <a href="python_turtle_project.html">
+        <img src = "pyturtle_logo.png" width = "300" height = "220">
+        </a>
+        <h2>this is my pyturtle project. made in 2026 in python To get more information <a href = "python_turtle_project.html"> click here </a> or click on the image</h2>
+    </div>
 </div>
 
 <a href="index.html">
