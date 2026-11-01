@@ -1,112 +1,125 @@
 import turtle
-import random
 import time
 
-backround_text = turtle.Turtle()
-backround_text.speed(1000)
+# setting the varibles
+second = 0
+on = 1
+off = 1
+
+# making the turtle reset
+reset = turtle.Turtle()
+reset.hideturtle()
+reset.speed(1000)
+reset.penup()
+reset.goto(100,150)
+reset.pendown()
+reset.color("orange")
+reset.hideturtle()
+
+#make this seconds display
+seconds = turtle.Turtle()
+seconds.hideturtle()
+seconds.penup()
+seconds.goto(-50,10)
+def write_seconds():
+ seconds.clear()
+ seconds.write("seconds:"+str(second),font=("Arial",20,"bold"))
+write_seconds()
+
+# drawing the rectangles for reset
+for i in range(2):
+  reset.begin_fill()
+  reset.forward(100)
+  reset.left(90)
+  reset.forward(50)
+  reset.left(90)
+reset.end_fill()
+reset.left(90)
+reset.forward(25)
+reset.right(90)
+reset.forward(25)
+reset.color("black")
+reset.write("reset",font=("Arial",20,"bold"))
 screen = turtle.Screen()
-screen.bgcolor("black")
-backround_text.hideturtle()
-backround_text.color("blue")
-backround_text.penup()
-backround_text.goto(-130,25)
-backround_text.pendown()
-backround_text.write("circle", font=("Arial", 50, "bold"))
+screen.bgcolor("blue")
 
-backround_text.color("red")
-backround_text.penup()
-backround_text.goto(-130,-25)
-backround_text.pendown()
-backround_text.write("catcher", font=("Arial", 50, "bold"))
-
-backround_text.color("white")
-backround_text.penup()
-backround_text.goto(-130,-100)
-backround_text.pendown()
-backround_text.write("press space bar to start the game", font=("Arial", 14, "bold"))
-
-start = 0
-def start_game():
-    global start
-    start = 1
-    return start
-screen.listen()
-screen.onkey(start_game, "space")
-run = True
-while run:
- if start == 1:
-  run = False  
-  backround_text.clear()
+# red_rectangle for the stop button
+def red_rectangle():
+    turtle.clear()
+    turtle.goto(-50,0)
+    turtle.color("red")
+    turtle.begin_fill()
+    for i in range(2):
+     turtle.forward(150)
+     turtle.right(90)
+     turtle.forward(50)
+     turtle.right(90)
+    turtle.end_fill()
+    turtle.right(90)
+    turtle.forward(30)
+    turtle.left(90)
+    turtle.forward(45)
+    turtle.color("black")
+    turtle.write("stop",font=("Arial",20,"bold"))
+    turtle.goto(30,-30)
+    
+#  drawing the backround and rectangle
+def green_rectangle():
   turtle.hideturtle()
-  screen.bgcolor("lightblue")
-  player = turtle.Turtle()
-  circle = turtle.Turtle()
-  circle.speed(1000)
-  player.penup()
+  turtle.speed(1000)
+  turtle.clear()
+  turtle.goto(-50,0)
+  turtle.color("green")
+  turtle.begin_fill()
+  for i in range(2):
+   turtle.forward(150)
+   turtle.right(90)
+   turtle.forward(50)
+   turtle.right(90)
+  turtle.end_fill()
+  turtle.right(90)
+  turtle.forward(30)
+  turtle.left(90)
+  turtle.forward(45)
+  turtle.color("black")
+  turtle.write("start",font=("Arial",20,"bold"))
+  turtle.goto(30,-30)
+green_rectangle()
 
-  score = 0
-  speed = 1
-  game_over = 0
-  checker = 0
-
-  turtle.penup()
-  turtle.goto(-100,100)
-  turtle.pendown()
-  turtle.write("Score: " + str(score), font=("Arial", 16, "bold"))
-
-  def circle_function():
-   circle.clear()
-   circle_x = random.randint(-180,180)
-   circle_y = random.randint(-180,180)
-   circle.penup()
-   circle.goto(circle_x,circle_y)
-   circle.dot(50)
-
+# a function for the click
+def start(x,y):
+ global on
+ global off
+ global second
  
-  circle_function()
-
-  def move():
-   global score
-   global speed
-   global game_over
-   global checker
-   x = player.xcor()
-   y = player.ycor()
-   if game_over == 0:
-    if x > 200 or x < -200 or y > 200 or y < -200:
-     game_over = 1
-    else:
-     player.forward(speed)
-     if player.distance(circle) < 25:
-      turtle.clear()
-      score = score+1
-      turtle.write("Score: " + str(score), font=("Arial", 16, "bold"))
-      circle_function()
-      speed = speed+0.05
-   else:
-     if checker == 0:
-      circle.clear()
-      turtle.clear()
-      turtle.hideturtle()
-      circle.hideturtle()
-      player.hideturtle()
-      screen.bgcolor("red")
-      turtle.write("you lose your score was "+str(score), font=("Arial",16,"bold"))
-      checker = checker + 1
-
-   screen.ontimer(move,10)
-
-
-  def right():
-   player.right(15)
+ if reset.distance(x,y) < 75:
+   second = 0
+   write_seconds()
+   
+ if turtle.distance(x,y) < 75:
+  if off == 0:
+   on = 1
+   off = 1
+   start = 0
+   green_rectangle()
+   return
  
-  def left():
-   player.left(15)
- 
-  screen.listen()
-  screen.onkey(right, "right")
-  screen.onkey(left, "left" )
-  screen.onkey(right, "d" )
-  screen.onkey(left, "a" )
+  if on == 1:
+   on = 1
+   red_rectangle()
+   off = 0
+screen.onscreenclick(start)
 
-  move()
+
+def tick():
+    global second
+    global on
+    global off
+    if on == 1 and off == 0:
+     second += 1
+     write_seconds()
+    screen.ontimer(tick, 1000)
+
+tick()
+
+screen.mainloop()
