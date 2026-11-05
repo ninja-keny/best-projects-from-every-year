@@ -30,7 +30,7 @@
 
         img:hover {
             transform: scale(1.05);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease;;
         }
 
         .projects {
@@ -168,7 +168,25 @@
             else{window.location.href = "python_turtle_project.html"}
 
         }
+        function download_all_projects() {
 
+            const projects = [
+                { name: "Balloon Pop Game", url: "poping_the_ballon_html.html" },
+                { name: "Microbit Project", url: "microbit_project.html" },
+                { name: "Stopwatch Project", url: "stop_wacth.html" },
+                { name: "Circle Catcher Game", url: "circle_cacher.html" },
+                { name: "PyTurtle+ Project", url: "python_turtle_project.html" }
+            ];
+
+            projects.forEach(project => {
+                const link = document.createElement("a");
+                link.href = project.url;
+                link.download = `${project.name}.html`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }   
     </script>
 
 </head>
@@ -250,6 +268,9 @@
 
 <button onclick="choose_random_project()">
     click to go into a random project
+</button>
+<button onclick="download_all_projects()">
+    click to download all projects
 </button>
 
 </body>
