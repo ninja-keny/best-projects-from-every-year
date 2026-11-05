@@ -42,7 +42,14 @@
             margin-bottom: 50px;
             margin-left: 100px;
         }
-
+        .a_bit_about_me{
+            height: 340px;
+            width: 320px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 20px;
+            border-color: 2px solid black;
+        }
         .ballon_game {
             height: 350px;
             width: 300px;
@@ -55,14 +62,16 @@
 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
+       .a_bit_about_me:hover{            
+            transform: scale(1.05);
+            transition: transform 0.3s ease;}
         .ballon_game:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
 
         .microbit_game {
-            height: 380px;
+            height: 350px;
             width: 320px;
             background-color: #f2f2f2;
             padding: 20px;
@@ -77,7 +86,7 @@
         }
 
         .project_2024 {
-            height: 400px;
+            height: 380px;
             width: 340px;
             padding: 20px;
             background-color: #fffdfd;
@@ -196,6 +205,17 @@
 <h1>welcome to my website which shows all my best projects from each year</h1>
 
 <div class="projects">
+    <div class = "a_bit_about_me">
+     <u>
+     <h2>a bit about me</h2>
+     </u>
+     <a  href="https://github.com/ninja-keny">
+     <img src = "my_github_picture.png" height = "200" width = "200">
+     </a>
+     <p>i started coing in 2022 but was able to acsses my first project in 2023 i also cone in python, html, javascript and css if you want
+        more information <a  href="https://github.com/ninja-keny">click here</a> or on the image
+     </p>
+    </div>
     <div class="ballon_game">
 
         <a href="poping_the_ballon_html.html">
@@ -272,6 +292,10 @@
 <button onclick="download_all_projects()">
     click to download all projects
 </button>
-
+<a  href="https://github.com/ninja-keny">
+    <button>
+        click to go to my github
+    </button>
+</a>
 </body>
 </html>

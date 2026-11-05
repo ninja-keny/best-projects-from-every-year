@@ -8,7 +8,7 @@
     <style>
 
         body {
-            background-color: #fffefe;
+            background-color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
@@ -17,20 +17,20 @@
         h1 {
             color: #000000;
         }
-
+        p{color: white}
         h2 {
             text-align: center;
-            color: #fcfafa;
+            color: #ffffff;
         }
 
         img {
-            border: 2px solid #fdfbfb;
+            border: 2px solid #fbfbfb;
             border-radius: 10px;
         }
 
         img:hover {
             transform: scale(1.05);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease;;
         }
 
         .projects {
@@ -42,6 +42,14 @@
             margin-bottom: 50px;
             margin-left: 100px;
         }
+        .a_bit_about_me{
+            height: 340px;
+            width: 320px;
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 20px;
+            border-color: 2px solid rgb(253, 253, 253);
+        }
 
         .ballon_game {
             height: 350px;
@@ -51,24 +59,26 @@
             padding: 15px;
 
             border-radius: 10px;
-            border: 1px solid #fcfcfc;
+            border: 1px solid #ffffff;
 
-            box-shadow: 0 4px 8px rgb(255, 254, 254);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.988);
         }
-
+        .a_bit_about_me:hover{            
+            transform: scale(1.05);
+            transition: transform 0.3s ease;}
         .ballon_game:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
         }
 
         .microbit_game {
-            height: 380px;
+            height: 350px;
             width: 320px;
             background-color: #000000;
             padding: 20px;
             border-radius: 10px;
-            border: 1px solid #fbfbfb;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.97);
+            border: 1px solid #ffffff;
+            box-shadow: 0 4px 8px rgb(255, 255, 255);
         }
 
         .microbit_game:hover {
@@ -77,11 +87,11 @@
         }
 
         .project_2024 {
-            height: 400px;
+            height: 380px;
             width: 340px;
             padding: 20px;
-            background-color: #060000;
-            border: 2px solid rgb(249, 249, 249);
+            background-color: #000000;
+            border: 2px solid rgb(255, 255, 255);
             border-radius: 20px;
         }
 
@@ -105,8 +115,8 @@
         }
 
         button {
-            background-color: #000000;
-            color: #f8f8f8;
+            background-color: #010000;
+            color: #ffffff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
@@ -118,14 +128,14 @@
         button:hover {
             transform: scale(1.1);
             transition: 0.3s;
-            background-color: #000000c4;
+            background-color: #000000d2;
         }
         .pyturtle_project{
             height: 350px;
             width: 300px;
             padding: 30px;
             background-color: #000000;
-            border: 2px solid rgb(253, 253, 253);
+            border: 2px solid rgb(255, 255, 255);
             border-radius: 20px;
         }
         .pyturtle_project:hover{transform: scale(1.1);
@@ -166,8 +176,9 @@
                 window.location.href = "circle_cacher.html";
             }
             else{window.location.href = "python_turtle_project.html"}
+
         }
-        function download_all_projects(){
+        function download_all_projects() {
 
             const projects = [
                 { name: "Balloon Pop Game", url: "poping_the_ballon_html.html" },
@@ -185,8 +196,7 @@
                 link.click();
                 document.body.removeChild(link);
             });
-        }
-
+        }   
     </script>
 
 </head>
@@ -196,7 +206,17 @@
 <h1>welcome to my website which shows all my best projects from each year</h1>
 
 <div class="projects">
-
+    <div class = "a_bit_about_me">
+     <u>
+     <h2>a bit about me</h2>
+     </u>
+     <a  href="https://github.com/ninja-keny">
+     <img src = "my_github_picture.png" height = "200" width = "200">
+     </a>
+     <p>i started coing in 2022 but was able to acsses my first project in 2023 i also cone in python, html, javascript and css if you want
+        more information <a  href="https://github.com/ninja-keny">click here</a> or on the image
+     </p>
+    </div>
     <div class="ballon_game">
 
         <a href="poping_the_ballon_html.html">
@@ -226,7 +246,6 @@
     </div>
 
     <div class="project_2024">
-
         <a href="stop_wacth.html">
             <img src="stop_wacth_screenshot.png" width="270" height="230">
         </a>
@@ -274,6 +293,10 @@
 <button onclick="download_all_projects()">
     click to download all projects
 </button>
-
+<a  href="https://github.com/ninja-keny">
+    <button>
+        click to go to my github
+    </button>
+</a>
 </body>
 </html>
